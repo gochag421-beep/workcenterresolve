@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<defs>
+<radialGradient id="g" cx="20%" cy="20%" r="80%">
+<stop offset="0%" stop-color="#13203a"/><stop offset="100%" stop-color="#080d17"/>
+</radialGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<circle cx="980" cy="180" r="230" fill="none" stroke="#d7b46a" stroke-opacity="0.25" stroke-width="2"/>
+<circle cx="980" cy="180" r="150" fill="none" stroke="#d7b46a" stroke-opacity="0.15" stroke-width="2"/>
+<text x="90" y="240" fill="#d7b46a" font-family="Inter,sans-serif" font-size="26" letter-spacing="8">WORKCENTERRESOLVE</text>
+<text x="86" y="360" fill="#f4f0e8" font-family="Georgia,serif" font-size="86" font-style="italic">Many worlds. One force.</text>
+<text x="90" y="450" fill="#9aa6b7" font-family="Inter,sans-serif" font-size="34">People. Business. Possibilities.</text>
+<text x="90" y="540" fill="#d7b46a" font-family="Inter,sans-serif" font-size="26">workcenterresolve@gmail.com</text>
+</svg>

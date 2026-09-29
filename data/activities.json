@@ -1,0 +1,13 @@
+{
+  "visible_codes": false,
+  "note_el": "Οι ΚΑΔ δεν εμφανίζονται δημόσια στην κύρια εμπειρία του site.",
+  "note_en": "KAD codes are not shown publicly in the main site experience.",
+  "domains": [
+    { "id": "hermes", "el": "Εμπόριο & προμήθειες", "en": "Trade & supply" },
+    { "id": "athena", "el": "Επιχειρηματική συμβουλευτική", "en": "Business consulting" },
+    { "id": "hephaestus", "el": "Εργασία & ανθρώπινο δυναμικό", "en": "People & opportunities" },
+    { "id": "hestia", "el": "Ακίνητα & χώροι", "en": "Property & spaces" },
+    { "id": "dionysus", "el": "Εκδηλώσεις & εμπειρίες", "en": "Events & experiences" },
+    { "id": "apollo", "el": "Προσωπικές & ειδικές υπηρεσίες", "en": "Personal & specialist services" }
+  ]
+}

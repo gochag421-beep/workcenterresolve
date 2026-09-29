@@ -19,6 +19,11 @@
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Μετάβαση στο περιεχόμενο</a>
+  <div class="scene" aria-hidden="true">
+    <div class="scene-layer sl-1" data-depth="0.06"></div>
+    <div class="scene-layer sl-2" data-depth="0.14"></div>
+    <div class="scene-layer sl-3" data-depth="0.26"></div>
+  </div>
   <div class="noise" aria-hidden="true"></div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
@@ -31,6 +36,7 @@
     <nav class="desktop-nav" aria-label="Κύρια πλοήγηση">
       <a href="#world" data-i18n="nav.world">Ο κόσμος μας</a>
       <a href="#domains" data-i18n="nav.domains">Δραστηριότητες</a>
+      <a href="#story" data-i18n="nav.story">Η ιστορία</a>
       <a href="#process" data-i18n="nav.process">Διαδρομή</a>
       <a href="#faq" data-i18n="nav.faq">Συχνές ερωτήσεις</a>
       <a href="#contact" data-i18n="nav.contact">Ας μιλήσουμε</a>
@@ -51,6 +57,7 @@
   <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <a href="#world" data-i18n="nav.world">Ο κόσμος μας</a>
     <a href="#domains" data-i18n="nav.domains">Δραστηριότητες</a>
+    <a href="#story" data-i18n="nav.story">Η ιστορία</a>
     <a href="#process" data-i18n="nav.process">Διαδρομή</a>
     <a href="#faq" data-i18n="nav.faq">Συχνές ερωτήσεις</a>
     <a href="#contact" data-i18n="nav.contact">Ας μιλήσουμε</a>
@@ -106,7 +113,7 @@
 
     <section class="journey" id="world">
       <div class="section-head">
-        <span class="section-index">01 / 06</span>
+        <span class="section-index">01 / 07</span>
         <p class="eyebrow" data-i18n="world.kicker">Ο ΚΟΣΜΟΣ ΜΑΣ</p>
         <h2 data-i18n="world.title">Η δύναμη βρίσκεται στη σύνδεση.</h2>
         <p data-i18n="world.text">
@@ -138,10 +145,65 @@
       </div>
     </section>
 
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="story-bg" aria-hidden="true"></div>
+      <div class="story-inner">
+      <div class="section-head">
+        <span class="section-index">02 / 07</span>
+        <p class="eyebrow" data-i18n="story.kicker">Η ΙΣΤΟΡΙΑ ΜΑΣ</p>
+        <h2 id="story-title" data-i18n="story.title">Μια διαδρομή που κυλάει.</h2>
+        <p data-i18n="story.subtitle">Από την πρώτη ιδέα στη σημερινή δομή — μια ιστορία σε πέντε σταθμούς, με οδηγό την εξέλιξη.</p>
+      </div>
+
+      <div class="story-track" id="storyTrack" aria-hidden="true">
+        <article class="story-panel">
+          <span class="sp-num">01</span>
+          <p class="sp-year" data-i18n="story.ch1Year">Η αρχή</p>
+          <h3 data-i18n="story.ch1Title">Μια ιδέα που ένωνε</h3>
+          <p data-i18n="story.ch1Text">Ξεκινήσαμε με μια απλή παραδοχή: οι άνθρωποι και οι επιχειρήσεις χρειάζονται έναν συνεργάτη που να κατανοεί πολλούς τομείς, όχι μόνο έναν.</p>
+        </article>
+        <article class="story-panel">
+          <span class="sp-num">02</span>
+          <p class="sp-year" data-i18n="story.ch2Year">Η σύνδεση</p>
+          <h3 data-i18n="story.ch2Title">Έξι τομείς, μία φιλοσοφία</h3>
+          <p data-i18n="story.ch2Text">Δημιουργήσαμε μια ενιαία δομή που ενώνει τομείς με διαφορετική εξειδίκευση αλλά κοινές αξίες: ακρίβεια, σεβασμό και συνέπεια.</p>
+        </article>
+        <article class="story-panel">
+          <span class="sp-num">03</span>
+          <p class="sp-year" data-i18n="story.ch3Year">Η εμπιστοσύνη</p>
+          <h3 data-i18n="story.ch3Title">Άνθρωποι πρώτα</h3>
+          <p data-i18n="story.ch3Text">Κάθε συνεργασία ξεκινά από μια συζήτηση. Ακούμε πριν προτείνουμε και χτίζουμε σχέσεις που διαρκούν πέρα από ένα έργο.</p>
+        </article>
+        <article class="story-panel">
+          <span class="sp-num">04</span>
+          <p class="sp-year" data-i18n="story.ch4Year">Η εξέλιξη</p>
+          <h3 data-i18n="story.ch4Title">Προσαρμογή στο σήμερα</h3>
+          <p data-i18n="story.ch4Text">Η αγορά αλλάζει. Εξελίσσουμε συνεχώς τις υπηρεσίες μας ώστε να ανταποκρίνονται σε νέες ανάγκες με σύγχρονη σκέψη.</p>
+        </article>
+        <article class="story-panel">
+          <span class="sp-num">05</span>
+          <p class="sp-year" data-i18n="story.ch5Year">Το αύριο</p>
+          <h3 data-i18n="story.ch5Title">Ένας κόσμος δυνατοτήτων</h3>
+          <p data-i18n="story.ch5Text">Συνεχίζουμε να μεγαλώνουμε, προσθέτοντας δυνατότητες και συνεργασίες — πάντα με οδηγό τον στόχο του κάθε ανθρώπου που μας εμπιστεύεται.</p>
+        </article>
+      </div>
+
+      <div class="story-rail" aria-hidden="true"><span class="story-rail-fill" id="storyRailFill"></span></div>
+
+      <ol class="story-story" id="storyStory" data-i18n-ignore>
+        <li class="story-line active" data-i18n="story.ch1Title">Μια ιδέα που ένωνε</li>
+        <li class="story-line" data-i18n="story.ch2Title">Έξι τομείς, μία φιλοσοφία</li>
+        <li class="story-line" data-i18n="story.ch3Title">Άνθρωποι πρώτα</li>
+        <li class="story-line" data-i18n="story.ch4Title">Προσαρμογή στο σήμερα</li>
+        <li class="story-line" data-i18n="story.ch5Title">Ένας κόσμος δυνατοτήτων</li>
+      </ol>
+      </div>
+    </section>
+
     <section class="domains" id="domains">
       <div class="section-head split">
         <div>
-          <span class="section-index">02 / 06</span>
+          <span class="section-index">03 / 07</span>
           <p class="eyebrow" data-i18n="domains.kicker">ΤΟΜΕΙΣ ΔΡΑΣΗΣ</p>
           <h2 data-i18n="domains.title">Έξι κόσμοι. Κοινός ορίζοντας.</h2>
         </div>
@@ -190,7 +252,7 @@
 
     <section class="values" id="values">
       <div class="section-head">
-        <span class="section-index">03 / 06</span>
+        <span class="section-index">04 / 07</span>
         <p class="eyebrow" data-i18n="values.kicker">ΓΙΑΤΙ ΕΜΑΣ</p>
         <h2 data-i18n="values.title">Σταθερές αξίες, καθαρή επικοινωνία.</h2>
       </div>
@@ -215,7 +277,7 @@
 
     <section class="process" id="process">
       <div class="section-head">
-        <span class="section-index">04 / 06</span>
+        <span class="section-index">05 / 07</span>
         <p class="eyebrow" data-i18n="process.kicker">ΑΠΟ ΤΗΝ ΙΔΕΑ ΣΤΗΝ ΠΡΑΞΗ</p>
         <h2 data-i18n="process.title">Κάθε συνεργασία έχει τη δική της διαδρομή.</h2>
       </div>
@@ -230,7 +292,7 @@
 
     <section class="faq" id="faq">
       <div class="section-head">
-        <span class="section-index">05 / 06</span>
+        <span class="section-index">06 / 07</span>
         <p class="eyebrow" data-i18n="faq.kicker">ΣΥΧΝΕΣ ΕΡΩΤΗΣΕΙΣ</p>
         <h2 data-i18n="faq.title">Όσα χρειάζεστε να γνωρίζετε.</h2>
       </div>
@@ -261,7 +323,7 @@
 
     <section class="contact" id="contact">
       <div class="contact-copy">
-        <span class="section-index">06 / 06</span>
+        <span class="section-index">07 / 07</span>
         <p class="eyebrow" data-i18n="contact.kicker">Η ΕΠΟΜΕΝΗ ΣΥΝΔΕΣΗ</p>
         <h2 data-i18n="contact.title">Ο δικός σας στόχος.<br>Η επόμενή μας συζήτηση.</h2>
         <p data-i18n="contact.text">Είτε αναζητάτε μια υπηρεσία, είτε θέλετε να συζητήσετε μια συνεργασία, η αρχή είναι απλή.</p>

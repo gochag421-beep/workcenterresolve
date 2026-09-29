@@ -4,7 +4,7 @@ const $$ = (s, p = document) => [...p.querySelectorAll(s)];
 const translations = {
   el: {
     "a11y.skip": "Μετάβαση στο περιεχόμενο",
-    "nav.world": "Ο κόσμος μας", "nav.domains": "Δραστηριότητες", "nav.process": "Διαδρομή", "nav.faq": "Συχνές ερωτήσεις", "nav.contact": "Ας μιλήσουμε",
+    "nav.world": "Ο κόσμος μας", "nav.domains": "Δραστηριότητες", "nav.story": "Η ιστορία", "nav.process": "Διαδρομή", "nav.faq": "Συχνές ερωτήσεις", "nav.contact": "Ας μιλήσουμε",
     "hero.kicker": "ΕΜΠΝΕΥΣΗ ΑΠΟ ΤΟ ΧΘΕΣ. ΟΡΑΜΑ ΓΙΑ ΤΟ ΑΥΡΙΟ.", "hero.line1": "Πολλοί κόσμοι.", "hero.line2": "Μία δύναμη.", "hero.line3": "Απεριόριστες δυνατότητες.",
     "hero.text": "Ενώνουμε ανθρώπους, επιχειρήσεις και ιδέες. Δημιουργούμε συνδέσεις που ανοίγουν νέους ορίζοντες.",
     "hero.cta1": "Ανακαλύψτε τον κόσμο μας", "hero.cta2": "Συζητήστε την ιδέα σας", "hero.scroll": "ΚΥΛΗΣΤΕ ΚΑΙ ΑΚΟΛΟΥΘΗΣΤΕ ΤΗ ΔΙΑΔΡΟΜΗ",
@@ -13,6 +13,12 @@ const translations = {
     "domains.kicker": "ΤΟΜΕΙΣ ΔΡΑΣΗΣ", "domains.title": "Έξι κόσμοι. Κοινός ορίζοντας.", "domains.text": "Διαφορετική εξειδίκευση. Η ίδια προσοχή σε κάθε συνεργασία.",
     "domain.trade": "Εμπόριο & προμήθειες", "domain.consulting": "Επιχειρηματική συμβουλευτική", "domain.people": "Εργασία & ανθρώπινο δυναμικό", "domain.property": "Ακίνητα & χώροι", "domain.events": "Εκδηλώσεις & εμπειρίες", "domain.special": "Προσωπικές & ειδικές υπηρεσίες",
     "domain.tradeText": "Ένα ευρύ φάσμα προϊόντων. Μία ενιαία προσέγγιση στις ανάγκες σας.", "domain.consultingText": "Στρατηγική σκέψη για τις αποφάσεις που διαμορφώνουν το αύριο.", "domain.peopleText": "Συνδέουμε τις δυνατότητες των ανθρώπων με τις ανάγκες των επιχειρήσεων.", "domain.propertyText": "Φροντίδα και οργάνωση για τους χώρους που έχουν αξία για εσάς.", "domain.eventsText": "Από την πρώτη ιδέα έως τη φιλοξενία. Στιγμές με προσωπικότητα.", "domain.specialText": "Εξειδικευμένες δραστηριότητες με προσοχή στις ιδιαίτερες ανάγκες σας.",
+    "story.kicker": "Η ΙΣΤΟΡΙΑ ΜΑΣ", "story.title": "Μια διαδρομή που κυλάει.", "story.subtitle": "Από την πρώτη ιδέα στη σημερινή δομή — μια ιστορία σε πέντε σταθμούς, με οδηγό την εξέλιξη.",
+    "story.ch1Year": "Η αρχή", "story.ch1Title": "Μια ιδέα που ένωνε", "story.ch1Text": "Ξεκινήσαμε με μια απλή παραδοχή: οι άνθρωποι και οι επιχειρήσεις χρειάζονται έναν συνεργάτη που να κατανοεί πολλούς τομείς, όχι μόνο έναν.",
+    "story.ch2Year": "Η σύνδεση", "story.ch2Title": "Έξι τομείς, μία φιλοσοφία", "story.ch2Text": "Δημιουργήσαμε μια ενιαία δομή που ενώνει τομείς με διαφορετική εξειδίκευση αλλά κοινές αξίες: ακρίβεια, σεβασμό και συνέπεια.",
+    "story.ch3Year": "Η εμπιστοσύνη", "story.ch3Title": "Άνθρωποι πρώτα", "story.ch3Text": "Κάθε συνεργασία ξεκινά από μια συζήτηση. Ακούμε πριν προτείνουμε και χτίζουμε σχέσεις που διαρκούν πέρα από ένα έργο.",
+    "story.ch4Year": "Η εξέλιξη", "story.ch4Title": "Προσαρμογή στο σήμερα", "story.ch4Text": "Η αγορά αλλάζει. Εξελίσσουμε συνεχώς τις υπηρεσίες μας ώστε να ανταποκρίνονται σε νέες ανάγκες με σύγχρονη σκέψη.",
+    "story.ch5Year": "Το αύριο", "story.ch5Title": "Ένας κόσμος δυνατοτήτων", "story.ch5Text": "Συνεχίζουμε να μεγαλώνουμε, προσθέτοντας δυνατότητες και συνεργασίες — πάντα με οδηγό τον στόχο του κάθε ανθρώπου που μας εμπιστεύεται.",
     "philosophy.kicker": "Η ΦΙΛΟΣΟΦΙΑ ΜΑΣ", "philosophy.title": "Η σοφία να βλέπεις μπροστά.<br>Η τόλμη να προχωράς.", "philosophy.tag": "ΑΡΧΑΙΕΣ ΑΞΙΕΣ. ΣΥΓΧΡΟΝΗ ΣΚΕΨΗ.",
     "values.kicker": "ΓΙΑΤΙ ΕΜΑΣ", "values.title": "Σταθερές αξίες, καθαρή επικοινωνία.",
     "values.oneTitle": "Ένας συνεργάτης", "values.oneText": "Έξι διαφορετικοί τομείς κάτω από μία ενιαία φιλοσοφία και ένα σημείο επαφής.",
@@ -33,7 +39,7 @@ const translations = {
   },
   en: {
     "a11y.skip": "Skip to content",
-    "nav.world": "Our world", "nav.domains": "Activities", "nav.process": "Journey", "nav.faq": "FAQ", "nav.contact": "Let's talk",
+    "nav.world": "Our world", "nav.domains": "Activities", "nav.story": "Our story", "nav.process": "Journey", "nav.faq": "FAQ", "nav.contact": "Let's talk",
     "hero.kicker": "INSPIRED BY THE PAST. BUILT FOR TOMORROW.", "hero.line1": "Many worlds.", "hero.line2": "One force.", "hero.line3": "Endless possibilities.",
     "hero.text": "We connect people, businesses and ideas. We create connections that open new horizons.",
     "hero.cta1": "Discover our world", "hero.cta2": "Discuss your idea", "hero.scroll": "SCROLL AND FOLLOW THE JOURNEY",
@@ -42,6 +48,12 @@ const translations = {
     "domains.kicker": "AREAS OF ACTIVITY", "domains.title": "Six worlds. One horizon.", "domains.text": "Different expertise. The same attention in every collaboration.",
     "domain.trade": "Trade & supply", "domain.consulting": "Business consulting", "domain.people": "People & opportunities", "domain.property": "Property & spaces", "domain.events": "Events & experiences", "domain.special": "Personal & specialist services",
     "domain.tradeText": "A broad range of products. One unified approach to your needs.", "domain.consultingText": "Strategic thinking for the decisions shaping tomorrow.", "domain.peopleText": "Connecting people's potential with business needs.", "domain.propertyText": "Care and coordination for the spaces that matter to you.", "domain.eventsText": "From the first idea to hosting. Experiences with character.", "domain.specialText": "Specialized activities with attention to unique needs.",
+    "story.kicker": "OUR STORY", "story.title": "A journey that rolls.", "story.subtitle": "From the first idea to today's structure — a story in five stops, guided by evolution.",
+    "story.ch1Year": "The beginning", "story.ch1Title": "An idea that connected", "story.ch1Text": "We started from a simple premise: people and businesses need a partner who understands many fields, not just one.",
+    "story.ch2Year": "The connection", "story.ch2Title": "Six fields, one philosophy", "story.ch2Text": "We built a single structure uniting fields with different expertise but shared values: precision, respect and consistency.",
+    "story.ch3Year": "The trust", "story.ch3Title": "People first", "story.ch3Text": "Every collaboration starts with a conversation. We listen before we propose and build relationships that last beyond a project.",
+    "story.ch4Year": "The evolution", "story.ch4Title": "Adapting to today", "story.ch4Text": "The market changes. We keep evolving our services to meet new needs with modern thinking.",
+    "story.ch5Year": "Tomorrow", "story.ch5Title": "A world of possibilities", "story.ch5Text": "We keep growing, adding capabilities and partnerships — always guided by the goal of every person who trusts us.",
     "philosophy.kicker": "OUR PHILOSOPHY", "philosophy.title": "The wisdom to see ahead.<br>The courage to move forward.", "philosophy.tag": "ANCIENT VALUES. MODERN THINKING.",
     "values.kicker": "WHY US", "values.title": "Steady values, clear communication.",
     "values.oneTitle": "One partner", "values.oneText": "Six different fields under one shared philosophy and a single point of contact.",
@@ -160,6 +172,10 @@ window.addEventListener("scroll", () => {
       const center = rect.top + rect.height / 2 - innerHeight / 2;
       card.style.transform = `translate3d(${Math.max(-18, Math.min(18, -center * .012 * depth))}px,0,0)`;
     });
+    $$(".scene-layer").forEach((layer) => {
+      const depth = Number(layer.dataset.depth || 0.1);
+      layer.style.transform = `translate3d(0,${(-y * depth).toFixed(1)}px,0) rotate(${(y * depth * .012).toFixed(3)}deg)`;
+    });
   }
   const max = document.documentElement.scrollHeight - innerHeight;
   const bar = $("#progress");
@@ -169,7 +185,37 @@ window.addEventListener("scroll", () => {
     toTop.hidden = !show;
     toTop.classList.toggle("show", show);
   }
+  updateStory();
 }, { passive: true });
+
+/* Rolling story: horizontal roll driven by scroll */
+const storySection = $("#story");
+const storyTrack = $("#storyTrack");
+const storyFill = $("#storyRailFill");
+const storyLines = $$(".story-line");
+
+function updateStory() {
+  if (!storySection || !storyTrack) return;
+  const rect = storySection.getBoundingClientRect();
+  const total = rect.height - innerHeight;
+  const progress = total > 0 ? Math.min(1, Math.max(0, -rect.top / total)) : 0;
+
+  if (reduceMotion) {
+    storyTrack.style.transform = "none";
+  } else {
+    const inner = storyTrack.parentElement;
+    const cs = getComputedStyle(inner);
+    const visible = inner.clientWidth - parseFloat(cs.paddingLeft || 0) - parseFloat(cs.paddingRight || 0);
+    const maxRoll = Math.max(0, storyTrack.scrollWidth - visible);
+    storyTrack.style.transform = `translate3d(${(-progress * maxRoll).toFixed(1)}px,0,0)`;
+  }
+  if (storyFill) storyFill.style.height = `${(progress * 100).toFixed(1)}%`;
+
+  const idx = Math.min(storyLines.length - 1, Math.round(progress * (storyLines.length - 1)));
+  storyLines.forEach((line, i) => line.classList.toggle("active", i === idx));
+}
+updateStory();
+window.addEventListener("resize", updateStory, { passive: true });
 
 /* Contact form */
 const form = $("#contactForm");

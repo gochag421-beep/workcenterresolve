@@ -1,0 +1,29 @@
+# Security policy for Workcenterresolve
+
+This is a static website served by GitHub Pages. It has no backend, no
+database and no server-side processing.
+
+## Reporting a vulnerability
+Please report suspected vulnerabilities privately to:
+
+  workcenterresolve@gmail.com
+
+Include steps to reproduce and any proof of concept. We aim to acknowledge
+reports within 5 business days.
+
+## Scope
+- Static assets in this repository (HTML, CSS, JavaScript, SVG).
+- Content Security Policy and other security headers defined in the pages.
+
+## Out of scope
+- GitHub Pages platform and GitHub infrastructure (report to GitHub).
+- Email providers handling workcenterresolve@gmail.com.
+
+## Design notes
+- The contact form does not transmit or store data on any server. It builds
+  a mailto link opened by the visitor's own email client.
+- The site makes no external network requests and loads no third-party
+  scripts, fonts or trackers.
+- A strict Content-Security-Policy is declared in the pages
+  (default-src none, script-src self, form-action none, object-src none,
+  frame-src none).

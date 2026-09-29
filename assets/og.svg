@@ -1,14 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Workcenterresolve — six fields, one partner">
 <defs>
-<radialGradient id="g" cx="20%" cy="20%" r="80%">
-<stop offset="0%" stop-color="#13203a"/><stop offset="100%" stop-color="#080d17"/>
+<radialGradient id="bg" cx="18%" cy="18%" r="90%">
+<stop offset="0%" stop-color="#16233b"/><stop offset="100%" stop-color="#0b1220"/>
 </radialGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#f0d79c"/><stop offset="100%" stop-color="#d7b46a"/>
+</linearGradient>
 </defs>
-<rect width="1200" height="630" fill="url(#g)"/>
-<circle cx="980" cy="180" r="230" fill="none" stroke="#d7b46a" stroke-opacity="0.25" stroke-width="2"/>
-<circle cx="980" cy="180" r="150" fill="none" stroke="#d7b46a" stroke-opacity="0.15" stroke-width="2"/>
-<text x="90" y="240" fill="#d7b46a" font-family="Inter,sans-serif" font-size="26" letter-spacing="8">WORKCENTERRESOLVE</text>
-<text x="86" y="360" fill="#f4f0e8" font-family="Georgia,serif" font-size="86" font-style="italic">Many worlds. One force.</text>
-<text x="90" y="450" fill="#9aa6b7" font-family="Inter,sans-serif" font-size="34">People. Business. Possibilities.</text>
-<text x="90" y="540" fill="#d7b46a" font-family="Inter,sans-serif" font-size="26">workcenterresolve@gmail.com</text>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<g transform="translate(910,315)" stroke="url(#gold)" stroke-width="1.4" fill="none" opacity="0.85">
+<circle r="150" stroke-opacity="0.35"/>
+<circle r="105" stroke-opacity="0.2"/>
+<g stroke="#5ee0c0" stroke-opacity="0.6">
+<line x1="0" y1="0" x2="0" y2="-170"/><line x1="0" y1="0" x2="147" y2="-85"/>
+<line x1="0" y1="0" x2="147" y2="85"/><line x1="0" y1="0" x2="0" y2="170"/>
+<line x1="0" y1="0" x2="-147" y2="85"/><line x1="0" y1="0" x2="-147" y2="-85"/>
+</g>
+<g fill="#0e1728" stroke="url(#gold)">
+<circle cx="0" cy="-170" r="13"/><circle cx="147" cy="-85" r="13"/><circle cx="147" cy="85" r="13"/>
+<circle cx="0" cy="170" r="13"/><circle cx="-147" cy="85" r="13"/><circle cx="-147" cy="-85" r="13"/>
+</g>
+<circle r="34" fill="#0e1728" stroke="url(#gold)" stroke-width="2"/>
+<text y="7" text-anchor="middle" fill="#f0d79c" font-family="Georgia,serif" font-size="22" font-style="italic">w.</text>
+</g>
+<text x="86" y="200" fill="#d7b46a" font-family="Inter,sans-serif" font-size="24" letter-spacing="7">WORKCENTERRESOLVE</text>
+<text x="84" y="300" fill="#f2f5f9" font-family="Georgia,serif" font-size="70">Six fields. One partner.</text>
+<text x="86" y="362" fill="#93a1b7" font-family="Inter,sans-serif" font-size="30">Trade · Consulting · People · Property · Events · Specialist</text>
+<text x="86" y="432" fill="#5ee0c0" font-family="Inter,sans-serif" font-size="24">workcenterresolve@gmail.com</text>
 </svg>

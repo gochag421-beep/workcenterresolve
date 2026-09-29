@@ -154,13 +154,76 @@ const toTop = $("#toTop");
 toTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* Rolling story refs */
+const storySection = $("#story");
+const storyTrack = $("#storyTrack");
+const storyFill = $("#storyRailFill");
+const storyLines = $$(".story-line");
+let storyMaxRoll = 0;
+
+function clamp01(v) { return Math.min(1, Math.max(0, v)); }
+
+function measureStory() {
+  if (!storyTrack) return;
+  const inner = storyTrack.parentElement;
+  const cs = getComputedStyle(inner);
+  const visible = inner.clientWidth - parseFloat(cs.paddingLeft || 0) - parseFloat(cs.paddingRight || 0);
+  storyMaxRoll = Math.max(0, storyTrack.scrollWidth - visible);
+}
+
+function updateStory() {
+  if (!storySection || !storyTrack) return;
+  const total = storySection.offsetHeight - innerHeight;
+  const progress = total > 0 ? clamp01(-storySection.getBoundingClientRect().top / total) : 0;
+
+  if (reduceMotion) {
+    storyTrack.style.transform = "none";
+  } else {
+    const tilt = cam.x * 3;
+    storyTrack.style.transform = `translate3d(${(-progress * storyMaxRoll).toFixed(1)}px,0,0) rotateY(${tilt.toFixed(2)}deg)`;
+  }
+  if (storyFill) storyFill.style.height = `${(progress * 100).toFixed(1)}%`;
+
+  const idx = Math.min(storyLines.length - 1, Math.round(progress * (storyLines.length - 1)));
+  storyLines.forEach((line, i) => line.classList.toggle("active", i === idx));
+}
+
+/* 3D camera: mouse-move parallax + tilt, combined with scroll depth */
+const scene = $(".scene");
+const temple = $(".temple");
+const cam = { tx: 0, ty: 0, x: 0, y: 0 };
+
 if (!reduceMotion) {
-  const temple = $(".temple");
   window.addEventListener("mousemove", (e) => {
-    const x = (e.clientX / innerWidth - .5) * 12;
-    const y = (e.clientY / innerHeight - .5) * 8;
-    if (temple) temple.style.transform = `translate(-50%,-48%) rotateY(${-12 + x}deg) rotateX(${5 - y}deg)`;
+    cam.tx = (e.clientX / innerWidth - .5) * 2;
+    cam.ty = (e.clientY / innerHeight - .5) * 2;
   }, { passive: true });
+  window.addEventListener("mouseout", (e) => {
+    if (!e.relatedTarget) { cam.tx = 0; cam.ty = 0; }
+  }, { passive: true });
+
+  const sceneLayers = $$(".scene-layer");
+
+  (function cameraLoop() {
+    cam.x += (cam.tx - cam.x) * 0.07;
+    cam.y += (cam.ty - cam.y) * 0.07;
+    const y = scrollY;
+
+    if (scene) scene.style.transform = `rotateY(${(-cam.x * 5).toFixed(2)}deg) rotateX(${(cam.y * 3.5).toFixed(2)}deg)`;
+
+    sceneLayers.forEach((layer) => {
+      const d = Number(layer.dataset.depth || 0.1);
+      const px = cam.x * 120 * d;
+      const py = -y * d * 0.4 + cam.y * 120 * d;
+      layer.style.transform = `translate3d(${px.toFixed(1)}px,${py.toFixed(1)}px,${(-d * 260).toFixed(1)}px)`;
+    });
+
+    if (temple) temple.style.transform = `translate(-50%,-48%) rotateY(${(-12 + cam.x * 9).toFixed(2)}deg) rotateX(${(5 - cam.y * 7).toFixed(2)}deg)`;
+
+    updateStory();
+    requestAnimationFrame(cameraLoop);
+  })();
 }
 
 window.addEventListener("scroll", () => {
@@ -171,10 +234,6 @@ window.addEventListener("scroll", () => {
       const rect = card.getBoundingClientRect();
       const center = rect.top + rect.height / 2 - innerHeight / 2;
       card.style.transform = `translate3d(${Math.max(-18, Math.min(18, -center * .012 * depth))}px,0,0)`;
-    });
-    $$(".scene-layer").forEach((layer) => {
-      const depth = Number(layer.dataset.depth || 0.1);
-      layer.style.transform = `translate3d(0,${(-y * depth).toFixed(1)}px,0) rotate(${(y * depth * .012).toFixed(3)}deg)`;
     });
   }
   const max = document.documentElement.scrollHeight - innerHeight;
@@ -188,34 +247,10 @@ window.addEventListener("scroll", () => {
   updateStory();
 }, { passive: true });
 
-/* Rolling story: horizontal roll driven by scroll */
-const storySection = $("#story");
-const storyTrack = $("#storyTrack");
-const storyFill = $("#storyRailFill");
-const storyLines = $$(".story-line");
-
-function updateStory() {
-  if (!storySection || !storyTrack) return;
-  const rect = storySection.getBoundingClientRect();
-  const total = rect.height - innerHeight;
-  const progress = total > 0 ? Math.min(1, Math.max(0, -rect.top / total)) : 0;
-
-  if (reduceMotion) {
-    storyTrack.style.transform = "none";
-  } else {
-    const inner = storyTrack.parentElement;
-    const cs = getComputedStyle(inner);
-    const visible = inner.clientWidth - parseFloat(cs.paddingLeft || 0) - parseFloat(cs.paddingRight || 0);
-    const maxRoll = Math.max(0, storyTrack.scrollWidth - visible);
-    storyTrack.style.transform = `translate3d(${(-progress * maxRoll).toFixed(1)}px,0,0)`;
-  }
-  if (storyFill) storyFill.style.height = `${(progress * 100).toFixed(1)}%`;
-
-  const idx = Math.min(storyLines.length - 1, Math.round(progress * (storyLines.length - 1)));
-  storyLines.forEach((line, i) => line.classList.toggle("active", i === idx));
-}
+measureStory();
 updateStory();
-window.addEventListener("resize", updateStory, { passive: true });
+window.addEventListener("resize", () => { measureStory(); updateStory(); }, { passive: true });
+window.addEventListener("load", () => { measureStory(); updateStory(); });
 
 /* Contact form */
 const form = $("#contactForm");

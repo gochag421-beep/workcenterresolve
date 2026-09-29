@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gochag421-beep.github.io/workcenterresolve/sitemap.xml
